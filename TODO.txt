@@ -4,4 +4,5 @@ TODO:
 COMPLETED:
     - Fix memory leaks
     - Implement delete entire list function
+    - Implement append node function
     - Add error handling
