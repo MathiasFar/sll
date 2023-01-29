@@ -2,5 +2,6 @@ TODO:
     - Refactor as header
 
 COMPLETED:
+    - Fix memory leaks
     - Implement delete entire list function
     - Add error handling
