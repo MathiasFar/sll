@@ -13,6 +13,9 @@ Node *head {NULL};
 // prepend node to beginning of list
 Node *prependNode(int data) {
     Node *new_ = new Node;
+    if(new_ == NULL) 
+        delete new_;
+        exit(-1);
     if(head == NULL) {
         new_->data = data;
         head = new_;
@@ -21,6 +24,25 @@ Node *prependNode(int data) {
         new_->next = head;
         new_->data = data;
         head=new_;
+    }
+    return new_;
+}
+
+Node *appendNode(int data) {
+    Node *new_ = new Node();
+    if(new_ == NULL) 
+        delete new_;
+        exit(-1);
+    new_->next = NULL;
+    new_->data = data;
+    if(head == NULL) {
+        head = new_;
+    } else {
+        Node *current = head;
+        while (current->next != NULL) {
+            current = current->next;
+        }
+        current->next = new_;
     }
     return new_;
 }
@@ -69,6 +91,7 @@ int main() {
     prependNode(5);
     prependNode(2);
     prependNode(11);
+    appendNode(6);
     printList();
 
     popNode();
