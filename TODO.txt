@@ -1,5 +1,6 @@
 TODO:
     - Refactor as header
+    - Implement removeNode function that removes a specific node 
 
 COMPLETED:
     - Fix memory leaks
