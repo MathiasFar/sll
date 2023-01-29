@@ -1,9 +1,9 @@
 TODO:
     - Implement removeNode function that removes a specific node 
+    - Implement error handling
 
 COMPLETED:
     - Refactor as class
     - Fix memory leaks
     - Implement delete entire list function
     - Implement append node function
-    - Add error handling
