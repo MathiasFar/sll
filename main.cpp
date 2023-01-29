@@ -8,8 +8,9 @@ struct Node {
     Node *next;
 };
 
-Node *head = NULL;
+Node *head {NULL};
 
+// prepend node to beginning of list
 Node *prependNode(int data) {
     Node *new_ = new Node;
     if(head == NULL) {
@@ -24,13 +25,14 @@ Node *prependNode(int data) {
     return new_;
 }
 
+// pop node from end of list
 Node *popNode() {
-    if(head->next == NULL) {
+    if(head== NULL) {
         delete head;
         return nullptr;
     }
-    Node *current = head;
-    Node *previous = NULL;
+    Node *current{head};
+    Node *previous {NULL};
     while (current->next != NULL) {
         previous = current;
         current = current->next;
@@ -40,8 +42,19 @@ Node *popNode() {
     return previous;
 }
 
-void printList() {
+void deleteList() {
     Node *current = head;
+    while(current != NULL) {
+        Node *temp = current;
+        current = current->next;
+        delete temp;
+    }
+    head = NULL; 
+}
+
+// print list
+void printList() {
+    Node *current {head};
     while (current != NULL) {
         cout<<current->data;
         if(current->next != NULL) {
@@ -59,6 +72,8 @@ int main() {
     printList();
 
     popNode();
+    printList();
+    deleteList();
     printList();
     return 0;
 }
