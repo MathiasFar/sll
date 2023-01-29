@@ -1,3 +1,6 @@
 TODO:
     - Refactor as header
-    - Implement more functionality
+
+COMPLETED:
+    - Implement delete entire list function
+    - Add error handling
