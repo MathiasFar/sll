@@ -1,8 +1,8 @@
 TODO:
-    - Refactor as header
     - Implement removeNode function that removes a specific node 
 
 COMPLETED:
+    - Refactor as header
     - Fix memory leaks
     - Implement delete entire list function
     - Implement append node function
